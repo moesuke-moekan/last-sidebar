@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Last Sidebar demo</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="../src/last-sidebar.css">
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="../src/jquery.mobile.events.js"></script>
+<script src="../src/jquery.last-sidebar.js"></script>
+<script>
+$(document).ready(function(){
+	$('#slideMenu').lastSidebar();
+});
+</script>
+</head>
+
+<body>
+
+<header>
+	<h1>Last Sidebar Demo v1.1.0</h1>
+	<p class="triggerBtn">
+		<a href="#" id="menuTrigger">
+			<span></span>
+			<span></span>
+			<span></span>
+		</a>
+	</p>
+</header>
+
+<div id="slideMenu">
+	<nav>
+		<h2>Menu</h2>
+		<ul class="globalNavi">
+			<li><a href="#">sample text</a></li>
+			<li><a href="#">sample text</a></li>
+			<li><a href="#">sample text</a></li>
+			<li><a href="#">sample text</a></li>
+			<li><a href="#">sample text</a></li>
+			<li><a href="#">sample text</a></li>
+		</ul>
+	</nav>
+</div>
+
+<div class="container">
+	<h2>プラグインの特徴</h2>
+	<ul class="disc">
+		<li>画面の横からスライドしてくるメニューを実装するためのプラグイン</li>
+		<li>CSSでデザインは自由にカスタマイズ可能</li>
+		<li>レスポンシブデザインにも対応</li>
+		<li>Chrome, Safari, Opera, Internet Explorer 8+, iOS 8+, Android 4+ にて検証済み</li>
+	</ul>
+	<h2>使い方</h2>
+	<h3>必要なファイルを読み込む</h3>
+	<p>clickイベントの代わりにjQueryMobileのtapイベントを使用しています。<br>
+	そのためjQueryMobileのモバイルイベント処理の部分のみを抜き出したファイルも一緒に読み込みます。</p>
+	<pre><code>&lt;link rel="stylesheet" href="last-sidebar.css"&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="jquery.mobile.events.js"&gt;&lt;/script&gt;
+&lt;script src="jquery.last-sidebar.js"&gt;&lt;/script&gt;</code></pre>
+	<h3>jQueryの記述</h3>
+	<pre><code><span class="jsComment">// デフォルト</span>
+$(function(){
+&nbsp;&nbsp;$('#slideMenu').lastSidebar();
+});</code></pre>
+<pre><code><span class="jsComment">// オプションを使用した場合</span>
+$(function(){
+&nbsp;&nbsp;$('#slideMenu').lastSidebar({
+&nbsp;&nbsp;&nbsp;&nbsp;itemTrigger: '#hamburger',
+&nbsp;&nbsp;&nbsp;&nbsp;align: 'left',
+&nbsp;&nbsp;&nbsp;&nbsp;speed: 200,
+&nbsp;&nbsp;});
+});</code></pre>
+	<h3>CSSのカスタマイズ</h3>
+	<p>last-sidebar.css の User Style: 以下にオリジナルのCSSを記述してください。</p>
+	<table>
+		<caption>オプション</caption>
+		<tr>
+			<th>プロパティ</th>
+			<th>デフォルト</th>
+			<th>説明</th>
+		</tr>
+		<tr>
+			<td>itemTrigger</td>
+			<td>'#menuTrigger'</td>
+			<td>スライドさせるトリガーとなるaタグのid名を指定します。</td>
+		</tr>
+		<tr>
+			<td>align</td>
+			<td>'right'</td>
+			<td>どの方向からスライドするかを 'right' または 'left' のどちらかで指定します。</td>
+		</tr>
+		<tr>
+			<td>speed</td>
+			<td>300</td>
+			<td>スライドアニメーションのスピードを指定します。</td>
+		</tr>
+		<tr>
+			<td>breakPoint</td>
+			<td>false</td>
+			<td>ウィンドウの横幅がここに指定した数値を超えている時はスライドメニューの機能がオフになります。</td>
+		</tr>
+		<tr>
+			<td>noscroll</td>
+			<td>false</td>
+			<td>true の場合、ドロワーメニュー表示時に背景スクロールが無効になります。</td>
+		</tr>
+	</table>
+</div>
+
+<footer>
+	<p><small>Copyright &copy; 2015 <a href="http://xn--nckmepf1g6g.com/" target="_blank">Suzusaki Makoto</a> All Rights Reserved.</small></p>
+</footer>
+
+</body>
+</html>

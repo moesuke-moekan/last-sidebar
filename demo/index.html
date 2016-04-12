@@ -23,7 +23,7 @@ $(document).ready(function(){
 <body>
 
 <header>
-	<h1>Last Sidebar Demo v1.1.0</h1>
+	<h1>Last Sidebar Demo v1.2.0</h1>
 	<p class="triggerBtn">
 		<a href="#" id="menuTrigger">
 			<span></span>
@@ -53,7 +53,7 @@ $(document).ready(function(){
 		<li>画面の横からスライドしてくるメニューを実装するためのプラグイン</li>
 		<li>CSSでデザインは自由にカスタマイズ可能</li>
 		<li>レスポンシブデザインにも対応</li>
-		<li>Chrome, Safari, Opera, Internet Explorer 8+, iOS 8+, Android 4+ にて検証済み</li>
+		<li>Chrome, Safari, Opera, Internet Explorer 8+, iOS 7+, Android 4+ にて検証済み</li>
 	</ul>
 	<h2>使い方</h2>
 	<h3>必要なファイルを読み込む</h3>
@@ -110,11 +110,31 @@ $(function(){
 			<td>false</td>
 			<td>true の場合、ドロワーメニュー表示時に背景スクロールが無効になります。</td>
 		</tr>
+		<tr>
+			<td>openBefore</td>
+			<td>function(){}</td>
+			<td>ドロワーメニューが表示する直前に実行されます。</td>
+		</tr>
+		<tr>
+			<td>openAfter</td>
+			<td>function(){}</td>
+			<td>ドロワーメニューが表示する直後に実行されます。</td>
+		</tr>
+		<tr>
+			<td>closeBefore</td>
+			<td>function(){}</td>
+			<td>ドロワーメニューが閉じる直前に実行されます。</td>
+		</tr>
+		<tr>
+			<td>closeAfter</td>
+			<td>function(){}</td>
+			<td>ドロワーメニューが閉じる直前に実行されます。</td>
+		</tr>
 	</table>
 </div>
 
 <footer>
-	<p><small>Copyright &copy; 2015 <a href="http://xn--nckmepf1g6g.com/" target="_blank">Suzusaki Makoto</a> All Rights Reserved.</small></p>
+	<p><small>Copyright &copy; 2015-2016 <a href="http://xn--nckmepf1g6g.com/" target="_blank">Suzusaki Makoto</a> All Rights Reserved.</small></p>
 </footer>
 
 </body>

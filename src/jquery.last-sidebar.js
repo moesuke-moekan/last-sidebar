@@ -146,7 +146,6 @@
 		// ------------------------------
 
 		var tapAction = function() {
-			console.log('!');
 			var menuWidth = menu.outerWidth();
 			$docBody.toggleClass('open');
 			// No set of break point or Window width is mobile

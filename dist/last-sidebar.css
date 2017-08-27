@@ -57,6 +57,9 @@ body.noscroll {
 /* ----------------------------------------
  *  User Style:
  * ---------------------------------------- */
+#slideMenu {
+	display: none;
+}
 #slideMenu h2 {
 	margin: 0;
 	padding: 24px 16px;

@@ -6,16 +6,16 @@
 <title>Last Sidebar demo</title>
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="../dist/last-sidebar.css">
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="../dist/jquery.mobile.events.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="../dist/jquery.mobile.events.min.js"></script>
 <script src="../dist/jquery.last-sidebar.min.js"></script>
 <script>
-$(document).ready(function(){
-	$('#slideMenu').lastSidebar();
+$(function() {
+	var $slideMenu = $('#slideMenu').lastSidebar();
+	$('#closeBtn').on('click', function(ev) {
+		ev.preventDefault();
+		$slideMenu.closeSlide();
+	});
 });
 </script>
 </head>
@@ -23,7 +23,7 @@ $(document).ready(function(){
 <body>
 
 <header>
-	<h1>Last Sidebar Demo v1.2.1</h1>
+	<h1>Last Sidebar Demo v1.3.0</h1>
 	<p class="triggerBtn">
 		<a href="#" id="menuTrigger">
 			<span></span>
@@ -44,6 +44,7 @@ $(document).ready(function(){
 			<li><a href="#">sample text</a></li>
 			<li><a href="#">sample text</a></li>
 		</ul>
+		<p class="closeBtnArea"><a href="#" id="closeBtn">閉じる</a></p>
 	</nav>
 </div>
 
@@ -53,14 +54,14 @@ $(document).ready(function(){
 		<li>画面の横からスライドしてくるメニューを実装するためのプラグイン</li>
 		<li>CSSでデザインは自由にカスタマイズ可能</li>
 		<li>レスポンシブデザインにも対応</li>
-		<li>Chrome, Safari, Opera, Internet Explorer 8+, iOS 7+, Android 4+ にて検証済み</li>
+		<li>Chrome, Safari, Opera, Internet Explorer 9+, iOS 8+, Android 4.4+ にて検証済み</li>
 	</ul>
 	<h2>使い方</h2>
 	<h3>必要なファイルを読み込む</h3>
 	<p>clickイベントの代わりにjQueryMobileのtapイベントを使用しています。<br>
 	そのためjQueryMobileのモバイルイベント処理の部分のみを抜き出したファイルも一緒に読み込みます。</p>
 	<pre><code>&lt;link rel="stylesheet" href="last-sidebar.css"&gt;
-&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"&gt;&lt;/script&gt;
+&lt;script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"&gt;&lt;/script&gt;
 &lt;script src="jquery.mobile.events.js"&gt;&lt;/script&gt;
 &lt;script src="jquery.last-sidebar.js"&gt;&lt;/script&gt;</code></pre>
 	<h3>jQueryの記述</h3>
@@ -131,10 +132,23 @@ $(function(){
 			<td>ドロワーメニューが閉じる直後に実行されます。</td>
 		</tr>
 	</table>
+	<table>
+		<caption>メソッド</caption>
+		<tr>
+			<th>メソッド名</th>
+			<th>引数</th>
+			<th>説明</th>
+		</tr>
+		<tr>
+			<td>closeSlide</td>
+			<td>なし</td>
+			<td>ドロワーメニューを閉じます。</td>
+		</tr>
+	</table>
 </div>
 
 <footer>
-	<p><small>Copyright &copy; 2015-2016 <a href="http://xn--nckmepf1g6g.com/" target="_blank">Suzusaki Makoto</a> All Rights Reserved.</small></p>
+	<p><small>Copyright &copy; 2015-2017 <a href="https://xn--nckmepf1g6g.com/" target="_blank">Suzusaki Makoto</a> All Rights Reserved.</small></p>
 </footer>
 
 </body>

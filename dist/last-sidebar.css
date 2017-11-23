@@ -64,6 +64,10 @@ body.noscroll {
 	margin: 0;
 	padding: 24px 16px;
 }
+#slideMenu .closeBtnArea {
+	padding: 0 16px;
+	text-align: right;
+}
 .globalNavi {
 	border-top: dotted 1px #333;
 }

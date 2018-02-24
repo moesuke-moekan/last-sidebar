@@ -118,13 +118,13 @@
 		 * @param isFirstLoad
 		 */
 		var resizePosition = function(isFirstLoad) {
-			if((!isOpen && !isFirstLoad) || (params.breakPoint !== null && isFirstLoad)) {
+			if((!isOpen && !isFirstLoad)) {
 				return;
 			}
 			var propLeft,
 				propRight;
 			// No set of break point or Window width is mobile
-			if(!params.breakPoint || window.innerWidth <= params.breakPoint || isFirstLoad) {
+			if(!params.breakPoint || window.innerWidth <= params.breakPoint) {
 				switch(params.align){
 					case 'right':
 						propLeft = 'auto';

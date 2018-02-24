@@ -1,5 +1,5 @@
 /*
- * jQuery Last Sidebar v1.3.0 - horizontal slide menu plugin
+ * jQuery Last Sidebar v1.3.1 - horizontal slide menu plugin
  *
  * under the MIT license
  * http://opensource.org/licenses/MIT
@@ -118,7 +118,7 @@
 		 * @param isFirstLoad
 		 */
 		var resizePosition = function(isFirstLoad) {
-			if(!(isOpen || isFirstLoad)) {
+			if((!isOpen && !isFirstLoad) || (params.breakPoint !== null && isFirstLoad)) {
 				return;
 			}
 			var propLeft,
